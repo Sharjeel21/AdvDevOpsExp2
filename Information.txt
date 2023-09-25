@@ -1,0 +1,34 @@
+** CMD to run --> nodemon app.js
+
+1) Data is fetched from OpenWeather API and stored in the form of JSON.
+
+2) Ways to make HTTP Requests in NODE.Js : https://www.twilio.com/blog/2017/08/http-requests-in-node-js.html
+--> HTTP is inside node only.
+--> Other 4 are external modules that need to be installed. 
+
+3) For HTTP get requests : https://nodejs.org/api/https.html#https_https_get_url_options_callback 
+
+4) HTTPS RESPONSE CODES : 
+--> Informational response = [100 - 199]
+--> Successful response = [200 - 299]
+    200 : OK
+--> Redirects = [300 - 399]
+--> Client Errors = [400 - 499]
+    404 : Not Found
+    401 : Unauthorized HTTP requests (When appid is wrong)
+--> Server Errors = [500 - 599]
+URL : https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+Dogs URL : https://httpstatusdogs.com/
+
+5) From Data to JSON : 
+// For converting the data into READABLE format : 
+    const weatherData = JSON.parse(data);
+    console.log(weatherData);
+
+6) From JSON to Data : 
+const object = {
+    name = "Nilanchal",
+    favouriteFood = "Maggie",
+    age = 19
+}
+JSON.stringfy(object);
